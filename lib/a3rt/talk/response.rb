@@ -8,5 +8,9 @@ module A3rt::Talk
       @message = data['message']
       @results = data['results'].map { |e| Result.new(e) } if data['results']
     end
+
+    def least_perplex
+      results.min_by(&:perplexity)
+    end
   end
 end
