@@ -20,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+api_key = "your api key"
+msg = "Hello"
+resp = A3rt::Talk.talk(msg, api_key)
+puts resp.reply
+```
+
+If you talk with a3rt many times, you can `authorize!`.
+
+```
+api_key = "your api key"
+A3rt::Talk.authorize!(api_key)
+puts A3rt::Talk.talk("Hello").reply
+puts A3rt::Talk.talk("Bye").reply
+```
 
 ## Development
 
