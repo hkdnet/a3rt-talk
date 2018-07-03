@@ -12,5 +12,10 @@ module A3rt::Talk
     def least_perplex
       results.min_by(&:perplexity)
     end
+
+    # @see https://a3rt.recruit-tech.co.jp/product/talkAPI/
+    def success?
+      status == 0
+    end
   end
 end
