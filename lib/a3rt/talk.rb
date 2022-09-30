@@ -6,7 +6,7 @@ require 'net/https'
 require 'json'
 
 module A3rt::Talk
-  ENDPOINT = "https://api.a3rt.recruit-tech.co.jp/talk/v1/smalltalk".freeze
+  ENDPOINT = "https://api.a3rt.recruit.co.jp/talk/v1/smalltalk".freeze
 
   class << self
     def authorize!(api_key)
